@@ -349,6 +349,15 @@
 				?></textarea>
 				<?= _i('help') ?> <?= _t('sub.feed.filteractions.help') ?>
 			</div>
+			<label class="group-name" for="filteractions_delete"><?= _t('conf.reading.delete.when') ?></label>
+			<div class="group-controls">
+				<textarea name="filteractions_delete" id="filteractions_delete"><?php
+					foreach ($this->feed->filtersAction('delete') as $filterDelete) {
+						echo htmlspecialchars($filterDelete->getRawInput(), ENT_NOQUOTES, 'UTF-8'), PHP_EOL;
+					}
+				?></textarea>
+				<?= _i('help') ?> <?= _t('sub.feed.filteractions.help') ?>
+			</div>
 		</div>
 
 		<div class="form-group form-actions">

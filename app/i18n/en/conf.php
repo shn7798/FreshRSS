@@ -116,6 +116,9 @@ return array(
 			'upon_reception' => 'upon receiving the article',
 			'when' => 'Mark article as read…',
 		),
+		'delete' => array(
+			'when' => 'Delete article…',
+		),
 		'show' => array(
 			'adaptive' => 'Adjust showing',
 			'all_articles' => 'Show all articles',

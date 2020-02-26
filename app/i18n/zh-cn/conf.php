@@ -116,6 +116,9 @@ return array(
 			'upon_reception' => '在接收文章后',
 			'when' => '何时将文章标记为已读',
 		),
+		'delete' => array(
+			'when' => '何时将文章删除',
+		),
 		'show' => array(
 			'adaptive' => '智能显示',
 			'all_articles' => '显示所有',

@@ -383,7 +383,10 @@ class FreshRSS_feed_Controller extends Minz_ActionController {
 						$entry->_id($id);
 
 						$entry->applyFilterActions();
-
+						if ($entry->feed() === null) {
+							//XXX: mark as deleted in applyFilterActions()
+							continue;
+						}
 						$entry = Minz_ExtensionManager::callHook('entry_before_insert', $entry);
 						if ($entry === null) {
 							// An extension has returned a null value, there is nothing to insert.

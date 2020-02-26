@@ -148,6 +148,7 @@ class FreshRSS_subscription_Controller extends Minz_ActionController {
 			}
 
 			$feed->_filtersAction('read', preg_split('/[\n\r]+/', Minz_Request::param('filteractions_read', '')));
+			$feed->_filtersAction('delete', preg_split('/[\n\r]+/', Minz_Request::param('filteractions_delete', '')));
 
 			$values = array(
 				'name' => Minz_Request::param('name', ''),
